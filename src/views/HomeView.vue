@@ -58,14 +58,14 @@ async function sendToStream(user_message) {
 
   try {
 
-    const response = await fetch(`http://${import.meta.env.VITE_SERVER_IPADDRESS}:${import.meta.env.VITE_SERVER_PORT}/stream`, {
+    const response = await fetch(`${import.meta.env.VITE_SERVER_IPADDRESS}/stream`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user_message)
-    })
+    });
 
     if(!response.ok) {
       console.log('Oops! Ha ocurrido un error', response.status)

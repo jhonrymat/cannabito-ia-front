@@ -10,7 +10,9 @@ export const state = reactive({
     systemTrigger: [],
 })
 
-const url = `http://${import.meta.env.VITE_SERVER_IPADDRESS}:${import.meta.env.VITE_SERVER_PORT}`
+const url = import.meta.env.VITE_SERVER_IPADDRESS
+
+console.log('link', url)
 
 export const socket = io(url, { autoConnect: false })
 

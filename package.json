@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite --port 5173 --host",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port $PORT --host",
+    "start": "npm run build && npm run preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "pinia": "^2.1.7",
+    "serve": "^14.2.3",
     "socket.io-client": "^4.7.2",
     "vue": "^3.3.4",
     "vue-markdown-render": "^2.1.1",
