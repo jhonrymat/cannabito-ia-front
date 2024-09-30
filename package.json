@@ -4,9 +4,9 @@
   "description": "A sample Vue.js application",
   "private": true,
   "scripts": {
-    "dev": "vite --port 5173 --host",
+    "dev": "vite --port $PORT --host",
     "build": "vite build",
-    "preview": "vite preview --port 5173 --host",
+    "preview": "vite preview --port $PORT --host",
     "start": "npm run build && npm run preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
